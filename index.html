@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Comparison of Spike Sorting Software by simonster</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Comparison of Spike Sorting Software</h1>
+        <p class="header">links and descriptions of publicly available code for spike sorting</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/simonster/SpikeSortingSoftware/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/simonster/SpikeSortingSoftware/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/simonster/SpikeSortingSoftware">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/simonster">simonster</a></p>
+
+
+      </header>
+      <section>
+        <table>
+<thead>
+<tr>
+<th>Software</th>
+<th>Language</th>
+<th>Detection</th>
+<th>Feature Extraction</th>
+<th>Clustering</th>
+<th>Drift</th>
+<th>Overlap</th>
+<th>Large-scale MEA</th>
+<th>Publications</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/pillowlab/BinaryPursuitSpikeSorting">BinaryPursuitSpikeSorting</a></td>
+<td>MATLAB</td>
+<td>binary pursuit</td>
+<td>N/A</td>
+<td>binary pursuit</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+<td><a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0062123">A model-based spike sorting algorithm for removing correlation artifacts in multi-neuron recordings</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/aecker/bpsort">bpsort</a></td>
+<td>MATLAB</td>
+<td>binary pursuit, raw signal threshold with alignment (for initialization)</td>
+<td>PCA (for initialization)</td>
+<td>t-distribution MM</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/jgasthaus/gpu_python">gpu_python</a></td>
+<td>Python</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>Generalized Polya urn dependent Dirichlet process MM</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td><a href="http://www.robots.ox.ac.uk/%7Efwood/assets/pdf/Gasthaus-NIPS-2009.pdf">Dependent dirichlet process spike sorting</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/AnaCalabrese/KFMM">KFMM</a></td>
+<td>MATLAB</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>Kalman filter GMM</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td><a href="http://www.sciencedirect.com/science/article/pii/S0165027010006655">Kalman filter mixture model for spike sorting of non-stationary data</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/marius10p/KiloSort">KiloSort</a></td>
+<td>MATLAB, CUDA C</td>
+<td>?</td>
+<td>PCA?</td>
+<td>?</td>
+<td>No</td>
+<td>Yes?</td>
+<td>Yes?</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/aecker/moksm">moksm</a></td>
+<td>MATLAB</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>Kalman filter t-distribution MM</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td><a href="https://github.com/aecker/moksm/raw/master/MoT_Kalman.pdf">EM for a mixture of drifting t-distributions</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.urut.ch/new/serendipity/index.php?/pages/osort.html">OSort</a></td>
+<td>MATLAB</td>
+<td>local energy threshold with alignment</td>
+<td>N/A</td>
+<td>template matching</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td><a href="http://www.urut.ch/pdfs/Rutishauser_2006a.pdf">Online detection and sorting of extracellularly recorded action potentials in human medial temporal lobe recordings, in vivo</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/magland/pebble">pebble</a></td>
+<td>C++, MATLAB</td>
+<td>?</td>
+<td>PCA</td>
+<td>ISO-SPLIT</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td><a href="http://arxiv.org/abs/1508.04841">Unimodal clustering using isotonic regression: ISO-SPLIT</a></td>
+<td></td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/kwikteam/phy">phy</a> (previously klustakwik)</td>
+<td>Python</td>
+<td>raw signal threshold with alignment</td>
+<td>PCA</td>
+<td>GMM, masked EM GMM</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+<td>
+<a href="http://biorxiv.org/content/biorxiv/early/2015/02/16/015198.full.pdf">Spike sorting for large, dense electrode arrays</a>, <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4298163/">High-dimensional cluster analysis with the Masked EM Algorithm</a>
+</td>
+<td>GUI for inspecting sorting results. Large, active community</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sg-s/spikesort">spikesort</a></td>
+<td>MATLAB</td>
+<td>raw signal threshold (height + width)</td>
+<td>PCA, factor analysis, sparse PCA, t-SNE</td>
+<td>1D GMM, 1D k-means</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td></td>
+<td>Claims "99.5% accuracy." Only supports clustering into two units.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jovo/spike-sorting">spike-sorting</a></td>
+<td>MATLAB</td>
+<td>N/A?</td>
+<td>focused mixture model</td>
+<td>focused mixture model</td>
+<td>Yes?</td>
+<td>No</td>
+<td>Yes?</td>
+<td><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6571240">Multichannel electrophysiological spike sorting via joint dictionary learning and mixture modeling</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://spyke.github.io">spyke</a></td>
+<td>Python</td>
+<td>raw signal threshold with alignment</td>
+<td>PCA, ICA</td>
+<td>gradient ascent (mean-shift variant)</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+<td>
+<a href="http://journal.frontiersin.org/article/10.3389/fnsys.2014.00006/abstract">Spike sorting for polytrodes: a divide and conquer approach</a>, <a href="http://journal.frontiersin.org/article/10.3389/neuro.11.009.2008/abstract">Python for large-scale electrophysiology</a>
+</td>
+<td>GUI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/tridesclous/tridesclous">trisdesclous</a></td>
+<td>Python</td>
+<td>raw signal threshold with alignment</td>
+<td>PCA</td>
+<td>GMM, k-means</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://vis.caltech.edu/%7Erodri/Wave_clus/Wave_clus_home.htm">Wave_clus</a></td>
+<td>MATLAB</td>
+<td>raw signal threshold with alignment</td>
+<td>Wavelets + Lillifors test</td>
+<td>superparamagnetic</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td><a href="https://vis.caltech.edu/%7Erodri/papers/Spike_sorting.pdf">Unsupervised spike detection and sorting with wavelets and superparamagnetic clustering</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
