@@ -182,10 +182,6 @@ pre {
 /* Tables */
 
 table {
-  width:100%;
-}
-
-table {
   border: 1px solid #ccc;
   margin-bottom: 32px;
   text-align: left;
@@ -420,4 +416,10 @@ footer {
     font-size:12pt;
     color:#444;
   }
+}
+
+.bigtable {
+  position: absolute;
+  left: 275px;
+  right: 0px;
 }
